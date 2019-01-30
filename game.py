@@ -64,7 +64,8 @@ class Game:
     MAP_KEY = {
         '#': 'WALL',
         '_': 'FLOOR',
-        '_': 'DOOR',
+        '|': 'DOOR',
+        'X': 'EXIT',
     }
 
     def __init__(self, initial_state):
@@ -81,7 +82,7 @@ class Game:
         """Translate state aspect e.g. game map into game
         """
         if state_aspect == 'player':
-            self.pc = Player(data)
+            self.player = Player(data)
         elif state_aspect == 'map':
             with open(data) as map_file:
                 for y, line in enumerate(map_file):
@@ -95,7 +96,6 @@ class Game:
                 config_data = json.load(config_file)
                 for config_aspect in config_data:
                     print('commencing read for %s' % config_aspect)
-                    print(config_data)
                     self._read(config_aspect, config_data[config_aspect])
         elif state_aspect == 'block_types':
             pass
@@ -106,7 +106,6 @@ class Game:
             # why is config_data the entire data blob rather than the config section?
             print(data)
             self.content = data
-
 
     def _draw(self):
         unmap = {v: k for k, v in self.MAP_KEY.items()}
@@ -130,6 +129,7 @@ class Game:
         return input
 
     def _describe(self):
+        print(self.current_coords)
         surroundings = self.map.nodes.get(self.current_coords)
         self._narrate(surroundings.description)
 
@@ -179,6 +179,7 @@ class Game:
             self._describe()
             action = self._ask()
             self._respond()
+
 
 game = Game({
     'map': 'map.txt',
