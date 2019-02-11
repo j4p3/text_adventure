@@ -50,5 +50,56 @@
     },
     "content": {
         "introduction": "You awaken in a converted hotel above a laundromat. You are likely to be eaten by a grue.\nA plain white ceiling is above you.\nIt's a narrow hallway. Doors line either side of the hall down to a corner in the distance. You can see some plain, some luridly decorated, but none are open. The light flickers overhead. How did you get here?\nYou hear a shuffling around the corner and sit up. Why does your head hurt so much?\n Please play the game. You can only play the game once in a lifetime. This is an irreplaceable opportunity.\n\nINSTRUCTIONS FOR THE GAME:\nyou do not know the rules of the game\nyou do not know the stakes of the game\nyou do not know the objective of the game\nyou do not know who controls the game\nyou do not know how to end the game\nYou start with 100 points.\nBegin."
+    },
+    "dictionary": {
+        "move": [
+            "go",
+            "run",
+            "move",
+            "walk",
+            "move"
+        ],
+        "inspect": [
+            "inspect",
+            "look",
+            "examine",
+            "look at",
+            "search"
+        ],
+        "fight": [
+            "attack",
+            "fight",
+            "punch",
+            "lash",
+            "strike",
+            "hit"
+        ],
+        "eat": [
+            "eat",
+            "consume",
+            "swallow",
+            "taste",
+            "lick"
+        ],
+        "flee": [
+            "run away",
+            "escape",
+            "flee"
+        ],
+        "talk": [
+            "communicate",
+            "talk",
+            "talk to",
+            "speak",
+            "yell",
+            "say"
+        ],
+        "take": [
+            "take",
+            "pick",
+            "pick up",
+            "grab",
+            "steal"
+        ]
     }
 }
